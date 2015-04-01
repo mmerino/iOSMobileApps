@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Tmi-ap-pbF">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="efl-g8-1QG">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="m40-i3-yF6"/>
+                                    <outlet property="delegate" destination="2" id="4PV-ZP-jea"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="efl-g8-1QG" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="Pcu-Iu-pvc"/>
+                            <constraint firstItem="efl-g8-1QG" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="Rs2-Nc-px6"/>
+                            <constraint firstItem="efl-g8-1QG" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="fto-sG-NIG"/>
+                            <constraint firstItem="efl-g8-1QG" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="kBW-uC-03f"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="rjM-gw-UH7"/>
+                    <connections>
+                        <segue destination="Xbj-mX-id7" kind="push" identifier="toSecondView" id="NS8-cl-LFJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="188" y="19"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="Oi3-Gi-gO6">
+            <objects>
+                <viewController id="Xbj-mX-id7" customClass="SecondViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="34u-6C-gGu">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="text" translatesAutoresizingMaskIntoConstraints="NO" id="WXY-Q3-lHC">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WXY-Q3-lHC" firstAttribute="trailing" secondItem="34u-6C-gGu" secondAttribute="trailing" type="default" id="35v-GQ-Qz0"/>
+                            <constraint firstItem="WXY-Q3-lHC" firstAttribute="top" secondItem="34u-6C-gGu" secondAttribute="top" type="default" id="Jc1-A4-CQY"/>
+                            <constraint firstItem="WXY-Q3-lHC" firstAttribute="leading" secondItem="34u-6C-gGu" secondAttribute="leading" type="default" id="VQo-eu-Kzm"/>
+                            <constraint firstItem="WXY-Q3-lHC" firstAttribute="bottom" secondItem="34u-6C-gGu" secondAttribute="bottom" type="default" id="ka9-Ml-p1N"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Z7U-YY-BOp"/>
+                    <connections>
+                        <outlet property="textBox" destination="WXY-Q3-lHC" id="IaX-Od-B9p"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gHc-dF-hIa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="615" y="19"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5gt-oD-Woi">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="Tmi-ap-pbF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9p4-0y-la2">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2" kind="relationship" relationship="rootViewController" id="D3y-xT-ogO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QqY-dK-pZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-226" y="19"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
